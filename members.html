@@ -1,0 +1,43 @@
+---
+layout: page
+title: Group Members
+group: members
+---
+
+{%- assign date_format = "%b %-d, %Y" -%}
+
+{% assign leaders = site.members | where: 'position', 'group leader' %}
+{% assign postdocs = site.members | where: 'position', 'postdoc' %}
+{% assign phds = site.members | where: 'position', 'phd' %}
+{% assign masters = site.members | where: 'position', 'masters' %}
+
+<div class="">
+  <h2>Group Leader</h2>
+  {% assign p = leaders | first %}
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-2 align-self-center">
+        <img src="{{ p.image | default: "/static/img/thumbnails/amino/thumbnail_Q.png" | relative_url }}" class="img-fluid rounded-start" alt="image not found">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>{{ p.name }}</h5>  
+          </div>
+          <div class="card-text">
+            {{ p.content }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 bg-light">
+        <div class="card-body">
+          <div class="text-muted">
+            Start date: {{ p.start_date | date: date_format }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hr-alpha mt-3 mb-3"></div>

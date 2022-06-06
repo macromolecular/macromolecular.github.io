@@ -1,0 +1,41 @@
+.sidebar-right {
+    background-image: url('/static/img/base/beta-black-rotate.png');
+    background-repeat: repeat-y;
+    background-size: 3em;
+    background-position: left top;"
+    padding-right: 5em;
+}
+
+.sidebar-right-inner {
+    margin-left: 5em;
+}
+
+.sidebar-left {
+    background-image: url('/static/img/base/beta-black-rotate.png');
+    background-repeat: repeat-y;
+    background-size: 3em;
+    background-position: right top;"
+    padding-left: 5em;
+}
+
+.sidebar-left-inner {
+    margin-right: 5em;
+}
+
+.hr-beta {
+    height: 2em;
+    width: 100%;
+    background-image: url('/static/img/base/beta-black.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: left center;"
+}
+
+.hr-alpha {
+    height: 2em;
+    width: 100%;
+    background-image: url('/static/img/base/alpha-black.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: left center;"
+}

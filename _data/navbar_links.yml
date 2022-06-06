@@ -1,0 +1,19 @@
+- title: Research
+  path: "/research"
+  group: research
+
+- title: Publications
+  path: "/publications"
+  group: publications
+
+- title: Members
+  path: "/members"
+  group: members
+
+- title: Blog
+  path: "/blog"
+  group: blog
+
+- title: Join Us
+  path: "/join"
+  group: join
