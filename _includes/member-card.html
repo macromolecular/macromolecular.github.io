@@ -1,46 +1,56 @@
 {% assign p = include.person %}
 <div class="card">
   <div class="row g-0">
-    <div class="col-md-3 align-self-top bg-light">
-      <div class="w-100 h-auto p-3">
-        {% if p.image %}
-        <img src="{{ p.image | relative_url }}" class="img-thumbnail" alt="image not found" role="img">
-        {% else %}
-        <img src="{{ "/assets/bootstrap-icons/icons/person-circle.svg" | relative_url }}" class="img-thumbnail w-100" alt="image not found" role="img">
-        {% endif %}
-      </div>
-      <div class="card-body pt-0">
-        <p class="text-muted text-center">
-            {% if p.start_date %}
-            Start date: {{ p.start_date | date: date_format }}
-            {% endif %}
-            {% if p.end_date %}
-            <br>End date: {{ p.end_date | date: date_format }}
-            {% endif %}
-        </p>
-        {% include social-block.html links=p.links %}
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card-body">
-        <div class="card-title">
-          <h5>{{ p.name }}</h5>  
+    <div class="col-12 col-lg-3 align-self-top bg-light">
+      <div class="row g-0">
+        <div class="col-6 offset-md-1 col-md-4 offset-lg-0 col-lg-12 p-3">
+          {% if p.image %}
+          <img src="{{ p.image | relative_url }}" class="img-thumbnail" alt="image not found" role="img">
+          {% else %}
+          <img src="{{ "/assets/bootstrap-icons/icons/person-circle.svg" | relative_url }}" class="img-thumbnail img-fluid" alt="image not found" role="img">
+          {% endif %}
         </div>
-        <div class="card-text">
-          {{ p.content }}
+        <!-- <div class="col-6 col-md-6 col-lg-12 align-self-center">
+          <p class="text-muted text-center">
+              {% if p.start_date %}
+              Start date: {{ p.start_date | date: date_format }}
+              {% endif %}
+              {% if p.end_date %}
+              <br>End date: {{ p.end_date | date: date_format }}
+              {% endif %}
+          </p>
+        </div> -->
+        <div class="col-6 offset-lg-1 col-lg-10 align-self-center p-3">
+          {% include social-block.html links=p.links %}
         </div>
       </div>
     </div>
-    <div class="col-md-3 bg-light">
-      {% if p.traits %}
-      <div class="card-body">
-        <div class="text-muted">
-          {% for t in p.traits %}
-          {% include simple_list.html items=t.items title=t.title %}
-          {% endfor %}
+    <div class="col-12 col-lg-9">
+      <div class="row g-0 h-100">
+        <div class="col-12">
+          <div class="card-body">
+            <div class="card-title">
+              <h5>{{ p.name }}</h5>  
+            </div>
+            <div class="card-text">
+              {{ p.content }}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 bg-light">
+          {% if p.traits %}
+          <div class="card-body text-muted">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-auto">
+              {% for t in p.traits %}
+              <div class="col">
+              {% include simple_list.html items=t.items title=t.title %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
         </div>
       </div>
-      {% endif %}
     </div>
   </div>
 </div>
