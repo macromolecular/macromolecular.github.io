@@ -1,0 +1,38 @@
+
+{% assign n_postdocs = site.data.vacancies.postdocs.number %}
+{% assign n_phds = site.data.vacancies.phds.number %}
+{% assign n_vacancies = n_postdocs + n_postdocs %}
+{% assign is_masters = site.data.vacancies.masters.available %}
+
+{% if (n_vacancies > 0) or is_masters %}
+<div class="card text-light bg-dark mb-3">
+  <div class="card-header py-2">
+    <h4 class="m-0">Join Us!</h4>
+  </div>
+  <hr class="m-0">
+  {% if n_vacancies > 0 %}
+  <div class="card-body py-2">
+    <p class="card-text">
+      <strong class="card-title">Available positions</strong>: 
+      We currently have vacancies for 
+      <a class="link-light" href="{{ "/join" | relative_url }}">
+      {% if n_postdocs > 0 %} {{ n_postdocs }} Postdocs {% endif %}
+      {% if n_postdocs > 0 and n_phds > 0 %} and {% endif %}
+      {% if n_phds > 0 %} {{ n_phds }} PhD students {% endif %}
+      </a>
+      in the group. For more information and how to apply, <a class="link-light" href="{{ "/join" | relative_url }}">click here</a>.
+    </p>
+  </div>
+  {% endif %}
+  <hr class="m-0 p-0">
+  {% if is_masters %}
+  <div class="card-body py-2">
+    <p class="card-text">
+      <strong class="card-title">Master's students</strong>: 
+      We always have projects for Master's students. 
+      Please contact us to discuss possible projects!
+    </p>
+  </div>
+  {% endif %}
+</div>
+{% endif %}

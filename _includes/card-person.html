@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="row g-0">
+    <div class="col-md-2 align-self-center">
+      {% if include.person.image %}
+      <img src="{{ include.person.image | relative_url }}" class="img-fluid" alt="image not found" role="img">
+      {% else %}
+      <img src="{{ "/assets/bootstrap-icons/icons/person-circle.svg" | relative_url }}" class="img-fluid w-100 p-3" alt="image not found" role="img">
+      {% endif %}
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <div class="card-title">
+          <h5>{{ include.person.name }}</h5>  
+        </div>
+        <div class="card-text">
+          {{ include.person.content }}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 bg-light">
+      <div class="card-body">
+        <div class="text-muted">
+          Start date: {{ include.person.start_date | date: date_format }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

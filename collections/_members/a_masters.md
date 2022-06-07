@@ -1,7 +1,7 @@
 ---
 name: A Person
 position: masters
-image: /static/img/members/profile-name.png
+image:
 ---
 
 A Person works here.

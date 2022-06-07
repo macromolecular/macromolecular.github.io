@@ -1,7 +1,7 @@
 ---
 name: A Person
-position: none
-image: /static/img/members/profile-name.png
+position:
+image:
 ---
 
 A Person works here.

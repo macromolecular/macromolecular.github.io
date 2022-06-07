@@ -39,3 +39,12 @@
     background-size: auto 100%;
     background-position: left center;"
 }
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,7 +1,7 @@
 ---
 name: A Person
 position: postdoc
-image: /static/img/members/profile-name.png
+image: 
 ---
 
 A Person works here.
