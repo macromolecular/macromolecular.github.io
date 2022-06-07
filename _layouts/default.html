@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+  {%- include site-head.html -%}
 
   <body>
 
-    {%- include header.html -%}
+    {%- include site-header.html -%}
 
     <main class="flex-shrink-0">
       <div class="container-fluid" style="padding: 60px 0px 0;">
@@ -14,7 +14,7 @@
 
     </main>
 
-    {%- include footer.html -%}
+    {%- include site-footer.html -%}
 
   </body>
 

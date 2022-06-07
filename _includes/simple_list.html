@@ -1,0 +1,6 @@
+<p class="mb-0"><strong>{{ include.title | upcase }}</strong></p>
+<ul>
+  {% for i in include.items %}
+  <li class="suppress-p-margins">{{ i | markdownify }}</li>
+  {% endfor %}
+</ul>

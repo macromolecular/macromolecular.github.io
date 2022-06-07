@@ -1,0 +1,14 @@
+{% if include.link %}
+<div class="col text-start">
+  <a href="{{ include.link }}">
+    <div class="d-flex align-items-center">
+      <div class="mx-1 my-0">
+        <i class="h3 bi {{ include.icon | "bi-link" }}"></i>
+      </div>
+      <div class="mx-1 my-0 small">
+        {{ include.text | upcase }}
+      </div>
+    </div>
+  </a>
+</div>
+{% endif %}

@@ -1,0 +1,10 @@
+{% assign ls = include.links %}
+
+<div class="row">
+
+  {% include social-col-maybe.html link=ls.twitter icon="bi-twitter" text="Twitter" %}
+  {% include social-col-maybe.html link=ls.scholar icon="bi-book" text="Scholar" %}
+  {% include social-col-maybe.html link=ls.bitbucket icon="bi-code" text="Bitbucket" %}
+  {% include social-col-maybe.html link=ls.orcid icon="bi-person-badge" text="ORCID" %}
+
+</div>
