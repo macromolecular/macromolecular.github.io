@@ -6,92 +6,18 @@ group: blog
 ---
 
 <!-- Pagination links --> 
+{% include blog-paginator.html paginator=paginator %}
 
-<nav aria-label="Blog pagination">
-  <ul class="pagination justify-content-center">
-
-  {% if paginator.previous_page %}
-    <li class="page-item">
-      <a class="page-link" href="{{ paginator.previous_page_path }}">
-        Previous
-      </a>
-    </li>
-  {% else %}
-    <li class="page-item disabled">
-      <a class="page-link">
-        Previous
-      </a>
-    </li>
-  {% endif %}
-
-  {% for page_no in (1..paginator.total_pages) %}
-  {% if page_no == paginator.page %}
-  <li class="page-item active" aria-current="page">
-    <a class="page-link">
-      {{ page_no }}
-    </a>
-  </li>
-  {% elsif page_no == 1 %}
-  <li class="page-item">
-    <a class="page-link" href="{{ page.path | relative_url }}">
-      {{ page_no }}
-    </a>
-  </li>
-  {% else %}
-  <li class="page-item">
-    <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page_no }}">
-      {{ page_no }}
-    </a>
-  </li>
-  {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <li class="page-item">
-      <a class="page-link" href="{{ paginator.next_page_path }}">
-        Next
-      </a>
-    </li>
-  {% else %}
-    <li class="page-item disabled">
-      <a class="page-link">
-        Next
-      </a>
-    </li>
-  {% endif %}
-
-  </ul>
-</nav>
-
+{% if paginator.posts.size > 0 %}
 <div class="row row-cols-1 row-cols-md-2 g-4">
   {%- for post in paginator.posts -%}
-  {%- assign date_format = "%b %-d, %Y" -%}
-
   <div class="col">
-    <div class="card">
-      <div class="row g-0">
-        <div class="col-md-4 align-self-center">
-          <img src="{{ post.thumbnail | default: "/static/img/thumbnails/amino/thumbnail_Q.png" | relative_url }}" class="img-fluid rounded-start" alt="image not found">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h5>
-            <p class="card-text">
-              {{ post.excerpt }}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">
-          {{ post.date | date: date_format }}
-        </small>
-      </div>
-    </div>
+    {% include post-preview-card.html post=post %}
   </div>
   {%- endfor -%}
 </div>
+{% else %}
+<div class="alert alert-dark">
+  No posts yet -- but then again, this group doesn't exist yet!
+</div>
+{% endif %}

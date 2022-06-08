@@ -58,6 +58,7 @@ plugins:
 paginate: 10
 paginate_path: "/blog/page:num"
 
+date_format: "%b %-d, %Y"
 
 collections_dir: collections
 

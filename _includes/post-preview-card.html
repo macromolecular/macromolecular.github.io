@@ -1,0 +1,26 @@
+{%- assign post = include.post -%}
+
+<div class="card h-100">
+  <div class="row g-0 flex-fill">
+    <div class="col-md-4 align-self-center">
+      <img src="{{ post.thumbnail | default: "/static/img/thumbnails/amino/thumbnail_Q.png" | relative_url }}" class="img-fluid rounded-start" alt="image not found">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h5>
+        <p class="card-text">
+          {{ post.excerpt | truncate: 500 }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">
+      {{ post.date | date: site.date_format }}
+    </small>
+  </div>
+</div>

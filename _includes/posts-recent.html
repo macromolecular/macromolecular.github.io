@@ -1,0 +1,36 @@
+<div class="accordion accordion-flush" id="recent-blog-posts">
+
+  {% for post in site.posts limit:10 %}
+
+  {% assign header_id = "acc-head-" | append: forloop.index %}
+  {% assign target_id = "acc-targ-" | append: forloop.index %}
+
+  {% if forloop.index == 1 %}
+    {% assign is_open = false %}
+  {% else %}
+    {% assign is_open = false %}
+  {% endif %}
+
+  <div class="accordion-item">
+    <div class="accordion-header" id="{{header_id}}">
+      <button class="accordion-button p-2 {% unless is_open %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#{{target_id}}" aria-expanded="{{ is_open }}" aria-controls="{{target_id}}">
+        <div class="d-flex flex-column">
+          <div class="small text-muted">{{ post.date | date: site.date_format }}</div>
+          <div>{{ post.title | truncate: 30 }}</div>
+        </div>
+      </button>
+    </div>
+    <div id="{{target_id}}" class="accordion-collapse collapse {% if is_open %}show{% endif %}" aria-labelledby="{{header_id}}" data-bs-parent="#accordionExample">
+      <div class="accordion-body p-2">
+        <div class="small my-0">
+          {{ post.excerpt | truncate: 100 }}
+        </div>
+        <div class="text-center">
+          <a class="btn btn-light" href="{{ post.url | relative_url }}" role="button">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
