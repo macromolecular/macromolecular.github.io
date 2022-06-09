@@ -13,14 +13,24 @@
 
   <div class="accordion-item">
     <div class="accordion-header" id="{{header_id}}">
-      <button class="accordion-button p-2 {% unless is_open %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#{{target_id}}" aria-expanded="{{ is_open }}" aria-controls="{{target_id}}">
+      <button 
+        class="accordion-button p-2 {% unless is_open %}collapsed{% endunless %}" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#{{target_id}}" 
+        aria-expanded="{{ is_open }}" 
+        aria-controls="{{target_id}}">
         <div class="d-flex flex-column">
-          <div class="small text-muted">{{ post.date | date: site.date_format }}</div>
+          <div class="small text-muted">{{ post.date | timeago }}</div>
           <div>{{ post.title | truncate: 30 }}</div>
         </div>
       </button>
     </div>
-    <div id="{{target_id}}" class="accordion-collapse collapse {% if is_open %}show{% endif %}" aria-labelledby="{{header_id}}" data-bs-parent="#accordionExample">
+    <div 
+      id="{{target_id}}" 
+      class="accordion-collapse collapse {% if is_open %}show{% endif %}" 
+      aria-labelledby="{{header_id}}" 
+      data-bs-parent="#accordionExample">
       <div class="accordion-body p-2">
         <div class="small my-0">
           {{ post.excerpt | truncate: 100 }}

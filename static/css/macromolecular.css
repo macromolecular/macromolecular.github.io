@@ -54,3 +54,19 @@ a:hover {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.div-link {
+    color:  inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+.div-link:hover {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+.div-link > div:hover {
+    background-color: #f8f9fa;
+}

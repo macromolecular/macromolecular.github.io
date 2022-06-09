@@ -1,5 +1,6 @@
 {%- assign post = include.post -%}
 
+<a class="div-link" href="{{ post.url | relative_url }}">
 <div class="card h-100">
   <div class="row g-0 flex-fill">
     <div class="col-md-4 align-self-center">
@@ -8,12 +9,13 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
+            {{ post.title | truncate: 100 | escape }}
+          <!-- <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | truncate: 100 | escape }}
+          </a> -->
         </h5>
         <p class="card-text">
-          {{ post.excerpt | truncate: 500 }}
+          {{ post.excerpt | truncate: 200 }}
         </p>
       </div>
     </div>
@@ -24,3 +26,4 @@
     </small>
   </div>
 </div>
+</a>

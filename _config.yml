@@ -34,6 +34,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-timeago
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -59,6 +60,9 @@ paginate: 10
 paginate_path: "/blog/page:num"
 
 date_format: "%b %-d, %Y"
+
+jekyll_timeago:
+  depth: 1
 
 collections_dir: collections
 
