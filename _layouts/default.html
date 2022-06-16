@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="h-100">
 
   {%- include site-head.html -%}
 
-  <body>
+  <body class="d-flex flex-column h-100">
 
     {%- include site-header.html -%}
 
     <main class="flex-shrink-0">
+      
       <div class="container-fluid" style="padding: 55px 0px 0;">
+
+        {% if page.banner %}
+        <div class="w-100 bg-dark border-bottom border-5">
+          <img src="{{ page.banner | relative_url}}" class="img-fluid">
+        </div>
+        {% endif %}
+
         {{ content }}
+        
       </div>
 
     </main>

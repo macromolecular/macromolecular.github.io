@@ -67,5 +67,25 @@ jekyll_timeago:
 collections_dir: collections
 
 collections: 
-  - publications
-  - members
+  publications:
+    output: false
+  members:
+    output: false
+  projects:
+    output: true
+  vacancies:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "projects" # a collection in your site, in plural form
+    values:
+      layout: "project"

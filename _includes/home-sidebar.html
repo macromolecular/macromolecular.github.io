@@ -1,45 +1,40 @@
-<div class="sidebar-right py-5">
-  <div class="sidebar-right-inner">
 
-    <div class="card border-top-0 border-bottom-0 rounded-0">
+<div class="card border-top-0 border-bottom-0 rounded-0">
 
-      <div class="card-body text-center py-0">
-        <!-- Recent blog posts -->
-        <h3>Group Activity</h3>
-      </div>
-      
-      <div class="hr-alpha my-3"> </div>
-
-      {% if site.posts.size > 0 %}
-
-      <div class="card-body text-center py-0">
-        <!-- Recent blog posts -->
-        <h5>Recent blog posts</h5>
-      </div>
-      
-      <div class="list-group list-group-flush border-top border-bottom">
-        {% include posts-recent.html %}
-      </div>
-    
-      <div class="hr-alpha my-3"> </div>
-
-      {% endif %}
-
-      <div class="card-body text-center py-0">
-        <h5>
-          Nick's twitter feed.<br>
-          <span class="small text-muted">(sometimes work-related)</span>
-        </h5>
-      </div>
-      
-      {% include twitter-pearce.html %}
-
-      <div class="hr-alpha my-3"> </div>
-
-    </div>
-
-
-    <!-- Twitter --> 
-
+  <div class="card-body text-center py-0">
+    <!-- Recent blog posts -->
+    <h3>Group Activity</h3>
   </div>
+  
+  <div class="hr-alpha"></div>
+
+  {% if site.posts.size > 0 %}
+
+  <div class="card-body text-center py-0">
+    <!-- Recent blog posts -->
+    <h5>Recent blog posts</h5>
+  </div>
+  
+  <div class="list-group list-group-flush border-top border-bottom">
+    {% include posts-recent.html %}
+  </div>
+
+  <div class="hr-alpha"></div>
+
+  {% endif %}
+
+  <!-- Twitter --> 
+
+  <div class="card-body text-center py-0">
+    <h5>
+      Nick's twitter feed.<br>
+      <span class="small text-muted">(sometimes work-related)</span>
+    </h5>
+  </div>
+  
+  {% include twitter-pearce.html %}
+
+  <div class="hr-alpha"></div>
+
 </div>
+

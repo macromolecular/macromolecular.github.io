@@ -31,6 +31,7 @@
           <div class="card-body">
             <div class="card-title">
               <h5>{{ p.name }}</h5>  
+              <h6 class="small text-muted">{{ p.job_title | default: p.position | upcase }}</h6>
             </div>
             <div class="card-text">
               {{ p.content }}

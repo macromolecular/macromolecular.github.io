@@ -5,12 +5,35 @@ layout: default
 <div class="container">
 
   <div class="row">
-    <div class="col-12 col-md-8 pt-5 pb-5">
-      {{ content }}
+
+    <div class="col-12 col-lg-8 page-padding">
+      
+      <div class="page-block mt-0">
+        {{ content }}
+      </div>
+
+      {% include join-banner.html %}
+
+      <div class="page-block">
+        {% include research-preview.html %}
+      </div>
+
+      <div class="page-block">
+        {% include scilifelab.html %}
+      </div>
+
     </div>
-    <div class="col-12 col-md-4">
-      {%- include home-sidebar.html -%}
+
+    <div class="col-12 col-lg-4">
+
+      <div class="sidebar-right page-padding">
+        <div class="sidebar-right-inner">
+          {%- include home-sidebar.html -%}
+        </div>
+      </div>
+      
     </div>
+    
   </div>
 
 </div>

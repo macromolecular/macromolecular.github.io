@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Really long blog title that needs to be truncated!"
-date: 1970-01-02
-categories: template
----
-
-Template blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog poste blog post

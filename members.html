@@ -9,9 +9,13 @@ group: members
 {% assign phds = site.members | where: 'position', 'phd' %}
 {% assign msts = site.members | where: 'position', 'masters' %}
 
-{%- include join-banner.html -%}
+<div class="">
+  {%- include join-banner.html -%}
+</div>
 
-{% if glrs.size > 0 %}{% include member-block.html people=glrs title="Group Leader" %}{% endif %}
-{% if pdcs.size > 0 %}{% include member-block.html people=pdcs title="Postdocs" %}{% endif %}
-{% if phds.size > 0 %}{% include member-block.html people=phds title="PhDs" %}{% endif %}
-{% if msts.size > 0 %}{% include member-block.html people=msts title="Master's Students" %}{% endif %}
+<div class="page-block">
+  {% if glrs.size > 0 %}{% include member-card-stack.html people=glrs title="Group Leader" %}{% endif %}
+  {% if pdcs.size > 0 %}{% include member-card-stack.html people=pdcs title="Postdocs" %}{% endif %}
+  {% if phds.size > 0 %}{% include member-card-stack.html people=phds title="PhDs" %}{% endif %}
+  {% if msts.size > 0 %}{% include member-card-stack.html people=msts title="Master's Students" %}{% endif %}
+</div>

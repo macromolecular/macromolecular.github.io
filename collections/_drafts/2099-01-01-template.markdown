@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Template1!"
-date: 1970-01-01
+title: "Template!"
+date: 2099-01-01
 categories: template
 ---
 

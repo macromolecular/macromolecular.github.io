@@ -33,7 +33,7 @@
       data-bs-parent="#accordionExample">
       <div class="accordion-body p-2">
         <div class="small my-0">
-          {{ post.excerpt | truncate: 100 }}
+          {{ post.excerpt | strip_html | truncate: 200 }}
         </div>
         <div class="text-center">
           <a class="btn btn-light" href="{{ post.url | relative_url }}" role="button">Read more</a>

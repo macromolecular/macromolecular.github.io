@@ -1,29 +1,29 @@
 {%- assign post = include.post -%}
 
 <a class="div-link" href="{{ post.url | relative_url }}">
-<div class="card h-100">
-  <div class="row g-0 flex-fill">
-    <div class="col-md-4 align-self-center">
-      <img src="{{ post.thumbnail | default: "/static/img/thumbnails/amino/thumbnail_Q.png" | relative_url }}" class="img-fluid rounded-start" alt="image not found">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">
-            {{ post.title | truncate: 100 | escape }}
-          <!-- <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | truncate: 100 | escape }}
-          </a> -->
-        </h5>
-        <p class="card-text">
-          {{ post.excerpt | truncate: 200 }}
-        </p>
+  <div class="card h-100">
+    <div class="row g-0 flex-fill">
+      <div class="col-6 offset-3 col-sm-3 offset-sm-0 align-self-center">
+        <img src="{{ post.thumbnail | default: "/static/img/thumbnails/amino/thumbnail_Q.png" | relative_url }}" class="img-fluid rounded-start" alt="image not found">
+      </div>
+      <div class="col-12 col-sm-9">
+        <div class="card-body d-flex flex-column h-100 ">
+          <h5 class="card-title">
+            {{ post.title | escape | truncate: 100 }}
+          </h5>
+          <p class="card-text">
+            {{ post.excerpt | strip_html | truncatewords: 200 }}
+          </p>
+          <div class="mt-auto btn btn-outline-dark">
+            Read More
+          </div>
+        </div>
       </div>
     </div>
+    <div class="card-footer">
+      <small class="text-muted">
+        {{ post.date | date: site.date_format }}
+      </small>
+    </div>
   </div>
-  <div class="card-footer">
-    <small class="text-muted">
-      {{ post.date | date: site.date_format }}
-    </small>
-  </div>
-</div>
 </a>

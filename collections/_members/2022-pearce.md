@@ -1,6 +1,7 @@
 ---
-name: Prof. Nick Pearce
+name: Nick Pearce
 position: group leader
+job_title: assistant professor
 start_date: 2022-10-01
 image: /static/img/members/profile-nick.jpg
 traits: 

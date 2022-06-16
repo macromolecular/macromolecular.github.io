@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-between g-4 pb-4">
+  <!-- Previous -->
+  {% if page.previous %}
+  <a class="btn btn-primary" href="{{ page.previous.url }}" role="button">
+  Previous Post
+  </a>
+  {% else %}
+  <a class="btn btn-secondary disabled" aria-disabled="true" role="button">
+  Previous Post
+  </a>
+  {% endif %}
+  <!-- Next -->
+  {% if page.next %}
+  <a class="btn btn-primary" href="{{ page.next.url }}" role="button">
+  Next Post
+  </a>
+  {% else %}
+  <a class="btn btn-secondary disabled" aria-disabled="true" role="button">
+  Next Post
+  </a>
+  {% endif %}
+</div>
+

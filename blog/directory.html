@@ -1,0 +1,48 @@
+---
+layout: page
+title: Blog Post Directory
+permalink: /blog/directory
+group: blog
+---
+
+{% if site.posts.size > 0 %}
+
+<div class="table-responsive">
+  <table class="table table-hover align-middle">
+
+    <thead>
+      <tr>
+        <th scope="col" class="w-auto text-nowrap flex-shrink-0 pe-3">Date Published</th>
+        <th scope="col" class="w-auto text-nowrap flex-shrink-0 pe-3">Author</th>
+        <th scope="col" class="w-auto text-nowrap flex-shrink-0 pe-3">Link</th>
+        <th scope="col" class="w-100">Title</th>
+      </tr>
+    </thead>
+
+    {%- for post in site.posts -%}
+      <tr>
+        <th class="text-nowrap" scope="row">
+          {{ post.date | date: site.date_format }}
+        </th>
+        <td class="text-nowrap">{{ post.author | default: '' }}</td>
+        <td>
+          <a class="text-nowrap btn btn-secondary" href="{{ post.url }}">Read Post</a>
+        </td>
+        <td>{{ post.title }}</td>
+      </tr>
+    {%- endfor -%}
+
+  </table>
+</div>
+
+{% else %}
+
+<div class="alert alert-dark">
+  No posts yet -- but then again, this group doesn't exist yet!
+</div>
+
+{% endif %}
+
+
+
+    

@@ -5,6 +5,10 @@ layout: default
 <div class="container">
 
   <div class="pt-5 pb-5">
+
+    {% include post-next-previous-bar.html %}
+
+    <p class="small text-muted">{{ page.date | date: site.date_format }}</p>
     <h2 class="mb-4">{{ page.title }}</h2>
     {{ content }}
   </div>

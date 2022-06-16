@@ -5,8 +5,8 @@
 {% assign is_masters = site.data.vacancies.masters.available %}
 
 {% if (n_vacancies > 0) or is_masters %}
-<div class="card text-light bg-dark mb-3">
-  <div class="card-header py-2">
+<div class="card text-light bg-dark">
+  <div class="card-header">
     <h4 class="m-0">Join Us!</h4>
   </div>
   <hr class="m-0">
@@ -20,12 +20,11 @@
       {% if n_postdocs > 0 and n_phds > 0 %} and {% endif %}
       {% if n_phds > 0 %} {{ n_phds }} PhD students {% endif %}
       </a>
-      in the group. <br> 
-      For more information and how to apply, <a class="link-light" href="{{ "/join" | relative_url }}">click here</a>.
+      in the group. For more information and how to apply, <a class="link-light" href="{{ "/join" | relative_url }}">click here</a>.
     </p>
   </div>
   {% endif %}
-  <hr class="m-0 p-0">
+  <hr class="m-0">
   {% if is_masters %}
   <div class="card-body py-2">
     <p class="card-text">

@@ -5,11 +5,19 @@ path: /blog
 group: blog
 ---
 
-<!-- Pagination links --> 
-{% include blog-paginator.html paginator=paginator %}
+<div class="d-flex align-content-start g-4">
+  <!-- Pagination links -->
+  <div class="flex-shrink-0 me-2">
+    {% include blog-paginator.html paginator=paginator %}
+  </div>
+  <!-- Catalog -->
+  <div class="flex-shrink-0">
+    <a class="btn btn-primary flex-shrink-0" href="{% link blog/directory.html %}" role="button">All Blog Posts</a>
+  </div>
+</div>
 
 {% if paginator.posts.size > 0 %}
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="row row-cols-1 g-4">
   {%- for post in paginator.posts -%}
   <div class="col">
     {% include post-preview-card.html post=post %}
