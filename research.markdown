@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research
 title: Research
 group: research
 ---
@@ -10,6 +10,3 @@ However, current models massively underrepresent the complexity of protein struc
 
 In the Linköping Advanced Macromolecular Structure group, we develop new experimental and computational approaches to unravelling protein structures and improving the level of detail in current models. 
 
-### Research Highlights
-
-{% include research-card-stack.html %}

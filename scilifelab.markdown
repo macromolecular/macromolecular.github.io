@@ -1,0 +1,5 @@
+### SciLifeLab
+
+As a national hub for molecular biosciences in Sweden, SciLifeLab develops and maintains unique research infrastructure, services and data resources for life science. SciLifeLab coordinates research communities in health and environmental science, recruitment and training of young scientists, and fosters collaboration with industry, health care, public research organizations and international partners. The overall aim of SciLifeLab is to facilitate cutting-edge, multi-disciplinary life science research and promote its translation to the benefit of society.
+
+SciLifeLab is jointly operated by its four founder universities: KTH Royal Institute of Technology, Karolinska Institutet, Stockholm University and Uppsala University. About 200 research groups, 1500 researchers and 40 national infrastructure units are associated with SciLifeLab. The two main research centers are located in Stockholm and Uppsala, but national SciLifeLab units exist at all major Swedish universities.

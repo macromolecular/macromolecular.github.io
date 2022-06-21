@@ -21,7 +21,7 @@
         aria-expanded="{{ is_open }}" 
         aria-controls="{{target_id}}">
         <div class="d-flex flex-column">
-          <div class="small text-muted">{{ post.date | timeago }}</div>
+          <div class="small text-muted">{{ post.date | date: site.date_format }}</div>
           <div>{{ post.title | truncate: 30 }}</div>
         </div>
       </button>

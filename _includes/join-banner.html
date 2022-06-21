@@ -1,10 +1,31 @@
 
-{% assign n_postdocs = site.data.vacancies.postdocs.number %}
-{% assign n_phds = site.data.vacancies.phds.number %}
-{% assign n_vacancies = n_postdocs + n_postdocs %}
-{% assign is_masters = site.data.vacancies.masters.available %}
+{% assign open_vacancies = site.vacancies | where: 'show', true %}
 
-{% if (n_vacancies > 0) or is_masters %}
+{% assign n_postdocs = 0 %}
+{% assign n_phds = 0 %}
+{% for v in open_vacancies %}
+  {% assign n_postdocs = n_postdocs | plus: v.n_postdocs %}
+  {% assign n_phds = n_phds | plus: v.n_phds %}
+{% endfor %}
+{% assign n_vacancies = n_postdocs | plus: n_phds %}
+
+{% assign nv_string = "" %}
+{% if n_postdocs > 0 %}
+  {% assign nv_string = nv_string | append: n_postdocs | append: " Postdoc" %}
+  {% if n_postdocs > 1 %}
+    {% assign nv_string = nv_string | append: "s" %}
+  {% endif %}
+{% endif %}
+{% if n_postdocs > 0 %}{% if n_phds > 0 %}
+  {% assign nv_string = nv_string | append: " and " %}
+{% endif %}{% endif %}
+{% if n_phds > 0 %}
+  {% assign nv_string = nv_string | append: n_phds | append: " PhD Student" %}
+  {% if n_phds > 1 %}
+    {% assign nv_string = nv_string | append: "s" %}
+  {% endif %}
+{% endif %}
+
 <div class="card text-light bg-dark">
   <div class="card-header">
     <h4 class="m-0">Join Us!</h4>
@@ -16,23 +37,17 @@
       <strong class="card-title">Available positions</strong>: 
       We currently have vacancies for 
       <a class="link-light" href="{{ "/join" | relative_url }}">
-      {% if n_postdocs > 0 %} {{ n_postdocs }} Postdocs {% endif %}
-      {% if n_postdocs > 0 and n_phds > 0 %} and {% endif %}
-      {% if n_phds > 0 %} {{ n_phds }} PhD students {% endif %}
+        {{ nv_string }}
       </a>
       in the group. For more information and how to apply, <a class="link-light" href="{{ "/join" | relative_url }}">click here</a>.
     </p>
   </div>
-  {% endif %}
   <hr class="m-0">
-  {% if is_masters %}
+  {% endif %}
   <div class="card-body py-2">
     <p class="card-text">
       <strong class="card-title">Master's students</strong>: 
-      We always have projects for Master's students. 
-      Please contact us to discuss possible projects!
+      If you are interested in doing your Master's project with us, please contact us to discuss possible projects!
     </p>
   </div>
-  {% endif %}
 </div>
-{% endif %}

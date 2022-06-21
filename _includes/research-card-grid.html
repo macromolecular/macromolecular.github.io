@@ -9,8 +9,10 @@
           <img src="{{ proj.image | default: dummy_img }}" class="img-fluid" alt="project-image">
         </div>
         <div class="card-footer text-center border-top-0 h-100">
-          <small class="text-muted">{{ proj.group | upcase }}</small>
-          <h5 class="card-title">{{ proj.title }}</h5>
+          <div class="d-flex flex-column h-100">
+            <small class="text-muted">{{ proj.group | upcase }}</small>
+            <h5 class="card-title mt-auto">{{ proj.title }}</h5>
+          </div>
         </div>
       </div>
     </a>

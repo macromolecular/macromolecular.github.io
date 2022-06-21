@@ -17,3 +17,7 @@
 - title: Join Us
   path: "/join"
   group: join
+
+- title: Contact
+  path: "/contact"
+  group: contact

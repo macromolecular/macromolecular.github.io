@@ -1,0 +1,44 @@
+{% assign open_vacancies = site.vacancies | where: 'show', true %}
+
+{% if open_vacancies.size > 0 %}
+
+<h3>Current Vacancies / Adverts </h3>
+
+<p>We currently have {{ open_vacancies.size }} advert(s) for positions in the group.</p>
+
+<div class="d-grid gap-3">
+  {% for v in open_vacancies %}
+  {% assign n_vacancies = v.n_postdocs | plus: v.n_phds %}
+  {% assign nv_string = "" %}
+  {% if v.n_postdocs > 0 %}
+    {% assign nv_string = nv_string | append: v.n_postdocs | append: " postdoc" %}
+    {% if v.n_postdocs > 1 %}
+      {% assign nv_string = nv_string | append: "s" %}
+    {% endif %}
+  {% endif %}
+  {% if v.n_postdocs > 0 %}{% if v.n_phds > 0 %}
+    {% assign nv_string = nv_string | append: " and " %}
+  {% endif %}{% endif %}
+  {% if v.n_phds > 0 %}
+    {% assign nv_string = nv_string | append: v.n_phds | append: " phd student" %}
+    {% if v.n_phds > 1 %}
+      {% assign nv_string = nv_string | append: "s" %}
+    {% endif %}
+  {% endif %}
+  <div class="card w-100">
+    <div class="card-header">
+      {{ v.title }} {% if n_vacancies > 0 %}| <strong>{{ nv_string | upcase }}</strong>{% endif %}
+    </div>
+    <div class="card-body">
+      {{ v.content }} 
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% else %}
+
+<p>Unfortunately we don't have any vacancies right now -- please check back later.</p>
+
+{% endif %}
+
