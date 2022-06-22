@@ -32,6 +32,9 @@
       aria-labelledby="{{header_id}}" 
       data-bs-parent="#accordionExample">
       <div class="accordion-body p-2">
+        <div class="my-0">
+          <h6>{{ post.title }}</h6>
+        </div>
         <div class="small my-0">
           {{ post.excerpt | strip_html | truncate: 200 }}
         </div>

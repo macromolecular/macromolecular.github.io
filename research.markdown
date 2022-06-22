@@ -8,5 +8,4 @@ Proteins perform an incredibly large range of functions in living organisms, fro
 
 However, current models massively underrepresent the complexity of protein structures and present them as static sets of atoms. In reality, proteins are flexible and in constant motion, and this flexibility can be crucial for enabling the protein's function. Moreover, the flexibility of the protein can be regulated by binding molecules, meaning that proteins can be made more or less active by changing their dynamics. 
 
-In the Linköping Advanced Macromolecular Structure group, we develop new experimental and computational approaches to unravelling protein structures and improving the level of detail in current models. 
-
+In the Data-Driven Determination of Macromolecular Structures (D3MS) group, we develop new experimental and computational approaches to unravel the subtleties of protein structures and achieve unprecendented levels of detail in macromolecular models.

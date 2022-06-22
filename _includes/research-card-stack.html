@@ -1,43 +1,49 @@
 
-{% for proj in site.projects %}
-{% assign stripped_content = proj.content | strip %}
-<div class="card my-4 w-100 text-dark">
-  <div class="card-header">
-    <div class="d-flex align-items-center w-100">
-      <small class="text-muted me-auto"><strong>{{ proj.group | upcase }}</strong> | {{ proj.title | upcase }}</small>
-      {% if proj.link %}
-      <a class="btn btn-dark ms-2" href="{{ proj.link }}">
-        Project page
-      </a>
-      {% endif %}
-      {% if stripped_content != "" %}
-      <a class="btn btn-dark ms-2" href="{{ proj.url }}">
-        Read more
-      </a>
-      {% endif %}
-    </div>
-  </div>
-  <!-- <a class="btn-outline-dark" href="{{ proj.link | default: proj.url }}"> -->
-    <div class="card-body">
-      <div class="d-flex justify-content-center align-items-center w-100">
-        <div class="col-2">
-          {% assign dummy_img = site.data.thumbnails.amino | sample %}
-          <img src="{{ proj.image | default: dummy_img }}" class="img-fluid" alt="project-image">
-        </div>
-        <div class="col-4 text-center">
-          <h3 class="card-title">{{ proj.title }}</h3>
+<div class="row row-cols-1 row-cols-lg-2 g-4">
+  {% for proj in site.projects %}
+  {% assign stripped_content = proj.content | strip %}
+  <div class="col">
+    <div class="card h-100 text-dark">
+      <div class="card-header">
+        <small class="text-muted me-auto"><strong>{{ proj.group | upcase }}</strong> | {{ proj.title | upcase }}</small>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="row align-items-center">
+              <div class="col-12">
+                {% assign dummy_img = site.data.thumbnails.amino | sample %}
+                <img src="{{ proj.image | default: dummy_img }}" class="img-fluid" alt="project-image">
+              </div>
+              <div class="col-12">
+                <h3 class="card-title text-center">{{ proj.title }}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="d-flex flex-column justify-content-center h-100">
+              {% if proj.link %}
+              <a class="btn btn-dark w-100 my-2" href="{{ proj.link }}">
+                Project page
+              </a>
+              {% endif %}
+              {% if stripped_content != "" %}
+              <a class="btn btn-dark w-100 my-2" href="{{ proj.url }}">
+                Read more
+              </a>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  <!-- </a> -->
-  <div class="card-body">  
-    <div class="my-4">
-      {% if proj.short_description %}
-      {{ proj.short_description }}
-      {% elsif stripped_content != "" %}
-      {{ proj.content | strip_html | truncatewords: 200 }}
-      {% endif %}
+      <div class="card-footer">
+        {% if proj.short_description %}
+        {{ proj.short_description }}
+        {% elsif stripped_content != "" %}
+        {{ proj.content | strip_html | truncatewords: 200 }}
+        {% endif %}
+      </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}

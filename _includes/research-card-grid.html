@@ -1,18 +1,19 @@
 
-<div class="row">
+<div class="row row-cols-1 row-cols-lg-2">
   {% for proj in site.projects %}
-  <div class="col-6 col-lg-4">
-    <a class="text-dark link-dark" href="{{ proj.link | default: proj.url }}">
+  <div class="col">
+    <a class="div-link" href="{{ proj.link | default: proj.url }}">
       <div class="card h-100">
-        <div class="card-img-top text-center ratio-1x1">
-          {% assign dummy_img = site.data.thumbnails.amino | sample %}
-          <img src="{{ proj.image | default: dummy_img }}" class="img-fluid" alt="project-image">
-        </div>
-        <div class="card-footer text-center border-top-0 h-100">
+        <div class="card-header text-center">
           <div class="d-flex flex-column h-100">
             <small class="text-muted">{{ proj.group | upcase }}</small>
             <h5 class="card-title mt-auto">{{ proj.title }}</h5>
           </div>
+        </div>
+        {% assign dummy_img = site.data.thumbnails.amino | sample %}
+        <img src="{{ proj.image | default: dummy_img }}" class="img-fluid ratio-1x1" alt="project-image">
+        <div class="card-footer h-100">
+          <p>{{ proj.short_description }}</p>
         </div>
       </div>
     </a>
