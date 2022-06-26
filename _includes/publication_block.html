@@ -1,0 +1,13 @@
+{% assign publications = include.publications %}
+{% assign detail = include.detail %}
+
+<div class="list-group page-block">
+  {%- for pub in publications -%}
+  {% if pub.title == "" %}
+    {% continue %}
+  {% endif %}
+  <div class="list-group-item list-group-item-action" aria-current="true">
+    {% include publication_item.html pub=pub detail=detail %}
+  </div>
+  {%- endfor -%}
+</div>

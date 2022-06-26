@@ -1,0 +1,46 @@
+{% assign publications = include.publications %}
+
+{% if publications.size > 0 %}
+
+{% assign sort_publications = publications | sort: 'pub_date' | reverse %}
+
+<div class="table-responsive">
+  <table class="table table-hover align-top">
+
+    <thead>
+      <tr>
+        <th scope="col" class="w-auto">Date</th>
+        <th scope="col" class="w-auto">Journal</th>
+        <th scope="col" class="w-auto">Title</th>
+        <th scope="col" class="w-auto">Authors</th>
+      </tr>
+    </thead>
+
+    {%- for pub in sort_publications -%}
+      <tr>
+        <th class="small" scope="row">
+          {{ pub.pub_date }}
+        </th>
+        <td class="small">
+          {{ pub.journal | default: '' }}
+        </td>
+        <td class="small">
+          <strong>{{ pub.title | markdownify }}</strong>
+        </td>
+        <td class="small">
+          {{ pub.authors | markdownify }}
+        </td>
+        
+      </tr>
+    {%- endfor -%}
+
+  </table>
+</div>
+
+{% else %}
+
+<div class="alert alert-dark">
+  No publications? Something's gone wrong here...
+</div>
+
+{% endif %}

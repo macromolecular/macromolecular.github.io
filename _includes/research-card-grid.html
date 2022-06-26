@@ -2,7 +2,7 @@
 <div class="row row-cols-1 row-cols-lg-2">
   {% for proj in site.projects %}
   <div class="col">
-    <a class="div-link" href="{{ proj.link | default: proj.url }}">
+    <a class="div-link" href="{{ proj.url | default: proj.link }}">
       <div class="card h-100">
         <div class="card-header text-center">
           <div class="d-flex flex-column h-100">
@@ -11,7 +11,7 @@
           </div>
         </div>
         {% assign dummy_img = site.data.thumbnails.amino | sample %}
-        <img src="{{ proj.image | default: dummy_img }}" class="img-fluid ratio-1x1" alt="project-image">
+        <img class="img-10 my-2 mx-auto" src="{{ proj.image | default: dummy_img }}" alt="project-image">
         <div class="card-footer h-100">
           <p>{{ proj.short_description }}</p>
         </div>

@@ -13,7 +13,7 @@
             <div class="row align-items-center">
               <div class="col-12">
                 {% assign dummy_img = site.data.thumbnails.amino | sample %}
-                <img src="{{ proj.image | default: dummy_img }}" class="img-fluid" alt="project-image">
+                <img class="img-fluid m-2" src="{{ proj.image | default: dummy_img }}" alt="project-image">
               </div>
               <div class="col-12">
                 <h3 class="card-title text-center">{{ proj.title }}</h3>

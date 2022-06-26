@@ -1,0 +1,53 @@
+---
+layout: page
+title: Publications
+group: publications
+---
+
+<p>Here is a list of the group's current publications.</p>
+
+<div class="d-flex justify-content-between align-items-center page-block">
+  <span class="me-2">
+    Jump to
+  </span>
+  <a class="btn btn-secondary flex-fill mx-2" href="#highlights" role="button">
+    Highlighted publications
+  </a>
+  <a class="btn btn-secondary flex-fill mx-2" href="#textbooks" role="button">
+    Textbooks
+  </a>
+  <a class="btn btn-secondary flex-fill mx-2" href="#reviews" role="button">
+    Reviews
+  </a>
+  <a class="btn btn-secondary flex-fill mx-2" href="#commentary" role="button">
+    Commentary / Opinion
+  </a>
+  <a class="btn btn-secondary flex-fill mx-2" href="#all" role="button">
+    Full publication list
+  </a>
+</div>
+
+<div class="hr-alpha"></div>
+
+{% include heading_return_to_top.html heading="Highlighted Publications" id="highlights" %}
+{% include publication_block_tag.html tag="highlight" detail=true %}
+
+<div class="hr-alpha"></div>
+
+{% include heading_return_to_top.html heading="Textbooks" id="textbooks" %}
+{% include publication_block_tag.html tag="textbook" detail=true %}
+
+<div class="hr-alpha"></div>
+
+{% include heading_return_to_top.html heading="Reviews" id="reviews" %}
+{% include publication_block_tag.html tag="review" detail=true %}
+
+<div class="hr-alpha"></div>
+
+{% include heading_return_to_top.html heading="Commentary / Opinion" id="commentary" %}
+{% include publication_block_tag.html tag="commentary" detail=true %}
+
+<div class="hr-alpha"></div>
+
+{% include heading_return_to_top.html heading="All publications" id="all" %}
+{% include publication_table.html publications=site.publications %}

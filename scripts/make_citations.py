@@ -17,6 +17,7 @@ authors: "{authors}"
 journal: "{journal}"
 pub_date: "{pub_date}"
 journal_link: ""
+download_link: ""
 ---
 """
 
@@ -50,16 +51,18 @@ for e in df.itertuples():
 
     for i in range(1,27):
 
-        p = p_template.format(
+        p_base = p_template.format(
             year = int(e.Year),
             author = f_author,
             letter = chr(ord('@')+i).lower(),
             )
 
-        if not pl.Path(p).exists():
+        p = (o_dir / p_base)
+
+        if not p.exists():
             break
 
-    with open(str(o_dir/p), 'w') as fh:
+    with open(str(p), 'w') as fh:
         fh.write(
             f
         )

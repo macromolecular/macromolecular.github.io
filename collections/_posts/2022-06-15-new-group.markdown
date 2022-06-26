@@ -4,7 +4,7 @@ title: "I'm starting a new research group!"
 date: 2022-06-16
 categories: news
 banner: "https://www.scilifelab.se/wp-content/uploads/2021/05/big-data_about-DDLS@10x-1920x686.png"
-thumbnail: "/static/img/d3ms-logo-light.svg"
+thumbnail: "/static/img/site/d3ms-logo-light.svg"
 ---
 
 I'm excited to announce that on 1st October I will be starting as an assistant professor in Linköping University in Sweden and starting my own research group. The initial funding is provided by the SciLifeLab initiative, as a [Data-Driven Life Sciences (DDLS)](https://www.scilifelab.se/data-driven/fellows/) fellowship, funded by the [Wallenberg foundation](https://kaw.wallenberg.org/en). <!--There's a short [interview]() with me on the SciLifeLab website.  -->

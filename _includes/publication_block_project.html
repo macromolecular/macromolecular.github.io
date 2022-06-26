@@ -1,0 +1,14 @@
+{% assign detail = include.detail | default: true %}
+{% assign project = include.project %}
+
+{% assign expression = "i.projects contains '" | append: project | append: "'" %} 
+{% assign pubs = site.publications | where_exp: "i", expression | sort: 'pub_date' | reverse %}
+
+{% assign hl_expression = "i.tags contains 'highlight'" %} 
+{% assign hl_pubs = pubs | where_exp: "i", hl_expression %}
+
+<h5>Highlighted publications</h5>
+{% include publication_block.html publications=hl_pubs detail=true %}
+
+<h5>All publications</h5>
+{% include publication_block.html publications=pubs detail=false %}

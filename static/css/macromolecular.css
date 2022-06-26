@@ -1,3 +1,47 @@
+.img-5 {
+    max-width: 5rem;
+    height: auto;
+}
+
+.img-10 {
+    max-width: 10rem;
+    height: auto;
+}
+
+.img-20 {
+    max-width: 20rem;
+    height: auto;
+}
+
+.img-30 {
+    max-width: 30rem;
+    height: auto;
+}
+
+.img-40 {
+    max-width: 40rem;
+    height: auto;
+}
+
+.img-50 {
+    max-width: 40rem;
+    height: auto;
+}
+
+.img-float-start {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    margin-right: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.img-float-end {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    margin-right: 0.5rem;
+    margin-left: 1.5rem;
+}
+
 .small-logo {
     margin-top: 1.0rem;
     margin-left: 1.0rem;
@@ -93,4 +137,12 @@ a:hover {
 
 .div-link > div:hover {
     background-color: #f8f9fa;
+}
+
+.jumptarget:before { 
+    display: block; 
+    content: " "; 
+    margin-top: -75px; 
+    height: 75px; 
+    visibility: hidden; 
 }

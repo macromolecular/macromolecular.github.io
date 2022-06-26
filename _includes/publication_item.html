@@ -1,0 +1,52 @@
+{% assign pub = include.pub %}
+{% assign detail = include.detail %}
+<div class="row">
+
+  <div class="col-12 col-md-1">
+    <div class="d-flex flex-md-column align-items-center">
+
+      {% if pub.journal_link %}
+      <h2 class="m-2 m-md-1">
+        <a href="{{ pub.journal_link }}"><i class="bi bi-link"></i></a>
+      </h2>
+      {% endif %}
+
+      {% if pub.download_link %}
+      <h2 class="m-2 m-md-1">
+        <a  href="{{ pub.download_link }}"><i class="bi bi-file-pdf"></i></a>
+      </h2>
+      {% endif %}
+
+    </div>
+  </div>
+  
+  <div class="col-11 py-2">
+
+    {% if pub.image %}
+    <img src="{{ pub.image | relative_url }}" class="float-end img-10 m-2" alt="image for the publication">
+    {% endif %}
+
+    <h6>
+      <strong>{{ pub.pub_date | split: '-' | first }} | {{ pub.journal | upcase }}</strong>
+    </h6>
+    
+    <hr class="mt-0">
+
+    <p class="lead">
+      {{ pub.title }}
+    </p>
+
+    <p>
+      <i>{{ pub.authors | markdownify }}</i>
+    </p>
+
+    {% if detail %}
+    <div>
+      <hr class="mt-0">
+      {{ pub.content }}
+    </div>
+    {% endif %}
+
+  </div>
+
+</div>

@@ -12,7 +12,7 @@ We are a highly interdisciplinary research group sitting at the intersection of 
 
 If you're interested in working with us and we don't have a position currently advertised, please contact us anyway. 
 
-We are always interested in supporting fellowship appliciations from young researchers, so if you have an idea you want to discuss, and the possibilities available to you, drop us an email.
+We are always interested in supporting fellowship applications from young researchers, so if you have an idea you want to discuss, and the possibilities available to you, drop us an email.
 
 Please send CVs and resumes to {% include contact-link.markdown %}. 
 
