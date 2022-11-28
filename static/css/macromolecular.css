@@ -24,8 +24,23 @@
 }
 
 .img-50 {
-    max-width: 40rem;
+    max-width: 50rem;
     height: auto;
+}
+
+.img-h10 {
+    max-height: 10rem;
+    width: auto;
+}
+
+.img-h20 {
+    max-height: 20rem;
+    width: auto;
+}
+
+.img-h30 {
+    max-height: 30rem;
+    width: auto;
 }
 
 .img-float-start {

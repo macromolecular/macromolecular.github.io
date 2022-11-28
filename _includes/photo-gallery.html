@@ -1,0 +1,10 @@
+{% assign images = include.images %}
+{% assign height = include.height | default: 10 %}
+
+<div class="d-flex flex-wrap justify-content-center my-2">
+{% for i in images %}
+  <div class="m-1">
+    <img src="{{ i | relative_url }}" class="img-fluid img-h{{ height }}" alt="image not found" role="img">
+  </div>
+{% endfor %}
+</div>
