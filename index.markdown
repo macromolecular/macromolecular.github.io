@@ -15,4 +15,4 @@ We use a variety of computational and experimental approaches, from mathematical
 
 What connects all of our methods is the idea that *decisions should be driven by the data*.
 
-We will soon be part of the [bioinformatics division](https://liu.se/en/organisation/liu/ifm/bioin) at [Linköping University](https://liu.se/en), and we will be collaborating closely with colleagues in the [Wallenberg Centre for Molecular Medicine (WCMM) at Linköping](https://liu.se/en/research/wcmm). We are part of the national Swedish [SciLifeLab network](https://www.scilifelab.se/data-driven/about/). 
+We are part of the [bioinformatics division](https://liu.se/en/organisation/liu/ifm/bioin) at [Linköping University](https://liu.se/en), and we collaborate closely with colleagues in the [Wallenberg Centre for Molecular Medicine (WCMM) at Linköping](https://liu.se/en/research/wcmm). We are part of the national Swedish [SciLifeLab network](https://www.scilifelab.se/) as part of the [Data-Driven Life Sciences (DDLS) program](https://www.scilifelab.se/data-driven/about/). 

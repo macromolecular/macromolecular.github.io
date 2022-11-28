@@ -1,5 +1,5 @@
-<div class="d-flex flex-wrap justify-content-around w-100">
+<div class="d-flex flex-wrap justify-content-center w-100">
   {% for funder in site.data.funders %}
-    <img class="small-logo" src="{{ funder.logo | escape | relative_url }}">
+    <img class="small-logo mx-4" src="{{ funder.logo | escape | relative_url }}">
   {% endfor %}
 </div>

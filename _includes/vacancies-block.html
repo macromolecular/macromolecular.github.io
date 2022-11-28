@@ -2,11 +2,13 @@
 
 {% if open_vacancies.size > 0 %}
 
-<h3>Current Vacancies / Adverts </h3>
+<!-- <h3>Current Vacancies / Adverts </h3> -->
 
 <p>We currently have {{ open_vacancies.size }} advert(s) for positions in the group.</p>
 
-<div class="d-grid gap-3">
+<p>For most positions, we will consider candidates with backgrounds in e.g. data science interested in structural biology, and with backgrounds in structural biology interested in data science approaches. Please contact us if you have questions regarding eligibility, or to discuss a position! 
+
+<div class="row row-cols-1 row-cols-md-3 g-0">
   {% for v in open_vacancies %}
   {% assign n_vacancies = v.n_postdocs | plus: v.n_phds %}
   {% assign nv_string = "" %}
@@ -25,12 +27,17 @@
       {% assign nv_string = nv_string | append: "s" %}
     {% endif %}
   {% endif %}
-  <div class="card w-100">
-    <div class="card-header">
-      {{ v.title }} {% if n_vacancies > 0 %}| <strong>{{ nv_string | upcase }}</strong>{% endif %}
-    </div>
-    <div class="card-body">
-      {{ v.content }} 
+  <div class="col"> 
+    <div class="card h-100 rounded-0">
+      <div class="card-header">
+        {{ v.title }} {% if n_vacancies > 0 %}| <strong>{{ nv_string | upcase }}</strong>{% endif %}
+      </div>
+      <div class="card-body">
+        {{ v.content }} 
+      </div>
+      <div class="card-footer">
+        <a href="{{ v.link }}">Read more and apply here</a>
+      </div>
     </div>
   </div>
   {% endfor %}

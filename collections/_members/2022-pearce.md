@@ -16,6 +16,8 @@ traits:
     items: ["Streaming Platforms", "Coffee Breaks", "Craft Breweries", "Gamification"]
   - title: "hobbies"
     items: "Gardening, Carpentry"
+  - title: "languages"
+    items: "English, Dutch"
 links: 
   twitter: "https://twitter.com/nicholas_pearce"
   scholar: "https://scholar.google.com/citations?hl=nl&user=C0_MtmAAAAAJ"
