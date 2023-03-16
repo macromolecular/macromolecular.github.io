@@ -1,7 +1,7 @@
 ---
 title: 'DDLS'
 n_postdocs: 1
-show: true
+show: false
 link: https://liu.se/en/work-at-liu/vacancies?rmpage=job&rmjob=20539&rmlang=UK
 ---
 

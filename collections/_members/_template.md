@@ -1,6 +1,6 @@
 ---
 name: A Person
-position:
+position: postdoc
 image:
 ---
 
