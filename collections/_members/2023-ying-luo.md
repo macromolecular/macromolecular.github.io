@@ -10,7 +10,7 @@ traits:
   - title: "weaknesses"
     items: ["Intermittent Social Phobia"]
   - title: "hobbies"
-   items: ["Single-player Game", "LARP", "Cooking", "Crafting"]
+    items: ["Single-player Game", "LARP", "Cooking", "Crafting"]
   - title: "languages"
     items: "Chinese, English"
 links: 
