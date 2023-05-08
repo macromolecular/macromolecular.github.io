@@ -3,7 +3,7 @@ name: Ying Luo
 position: phd
 job_title: Doctoral Student
 start_date: 2023-05-01
-image: "/static/img/members/ying-luo.png"
+image: "/static/img/members/profile-kelly.png"
 traits: 
   - title: "strengths"
     items: ["Programming", "Machine Learning"] 
