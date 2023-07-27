@@ -1,6 +1,6 @@
 ---
 name: Ylva Strid Holmertz
-position: research assistant
+position: staff
 job_title: Research Assistant
 start_date: 2023-06-12
 image: "/static/img/members/profile-ylva.jpg"

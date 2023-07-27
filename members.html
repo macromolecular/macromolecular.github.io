@@ -8,7 +8,7 @@ group: members
 {% assign pdcs = site.members | where: 'position', 'postdoc' %}
 {% assign phds = site.members | where: 'position', 'phd' %}
 {% assign msts = site.members | where: 'position', 'masters' %}
-{% assign resa = site.members | where: 'position', 'research assistant' %}
+{% assign staf = site.members | where: 'position', 'staff' %}
 
 <div class="">
   {%- include join-banner.html -%}
@@ -19,5 +19,5 @@ group: members
   {% if pdcs.size > 0 %}{% include member-card-stack.html people=pdcs title="Postdocs" %}{% endif %}
   {% if phds.size > 0 %}{% include member-card-stack.html people=phds title="PhDs" %}{% endif %}
   {% if msts.size > 0 %}{% include member-card-stack.html people=msts title="Master's Students" %}{% endif %}
-  {% if resa.size > 0 %}{% include member-card-stack.html people=resa title="Research Assistant" %}{% endif %}
+  {% if staf.size > 0 %}{% include member-card-stack.html people=staf title="Staff"%}{% endif %}
 </div>
