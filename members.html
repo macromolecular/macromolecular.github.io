@@ -4,11 +4,11 @@ title: Group Members
 group: members
 ---
 
-{% assign glrs = site.members | where: 'position', 'group leader' %}
-{% assign pdcs = site.members | where: 'position', 'postdoc' %}
-{% assign phds = site.members | where: 'position', 'phd' %}
-{% assign msts = site.members | where: 'position', 'masters' %}
-{% assign staf = site.members | where: 'position', 'staff' %}
+{% assign glrs = site.members | where: 'position', 'group leader' | sort: 'start_date' %}
+{% assign pdcs = site.members | where: 'position', 'postdoc' | sort: 'start_date' %}
+{% assign phds = site.members | where: 'position', 'phd' | sort: 'start_date' %}
+{% assign msts = site.members | where: 'position', 'masters' | sort: 'start_date' %}
+{% assign staf = site.members | where: 'position', 'staff' | sort: 'start_date' %}
 
 <div class="">
   {%- include join-banner.html -%}
