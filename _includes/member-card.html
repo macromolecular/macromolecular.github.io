@@ -31,7 +31,14 @@
           <div class="card-body">
             <div class="card-title">
               <h5>{{ p.name }}</h5>  
-              <h6 class="small text-muted">{{ p.job_title | default: p.position | upcase }}</h6>
+              <h6 class="small text-muted">
+                {{ p.job_title | default: p.position | upcase }}
+              </h6>
+              {% if p.roles %}
+              {% for r in p.roles %}
+              <span class="badge bg-secondary">{{ r }}</span>
+              {% endfor %}
+              {% endif %}
             </div>
             <div class="card-text">
               {{ p.content }}

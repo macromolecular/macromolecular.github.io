@@ -4,6 +4,8 @@ position: postdoc
 job_title: Post-doctoral Researcher
 start_date: 2023-03-01
 image: "/static/img/members/profile-lena.png"
+roles: 
+  - Chief Vibe Officer
 traits: 
   - title: "strengths"
     items: ["Biochemistry", "Organized"] 

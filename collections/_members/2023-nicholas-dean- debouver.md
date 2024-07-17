@@ -4,6 +4,9 @@ position: phd
 job_title: Doctoral Student
 start_date: 2023-08-01
 image: "/static/img/members/profile-nic.jpg"
+roles:  
+  - Group Secretary
+  - Chief Dog Owner
 traits: 
   - title: "strengths"
     items: ["Crystallography", "Turning coffee into code", "Multitasking", "Tipping"] 

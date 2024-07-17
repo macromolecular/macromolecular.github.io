@@ -4,6 +4,8 @@ position: phd
 job_title: Doctoral Student
 start_date: 2023-05-01
 image: "/static/img/members/profile-kelly.jpg"
+roles: 
+  - Sysadmin
 traits: 
   - title: "strengths"
     items: ["Programming", "Machine Learning"] 
