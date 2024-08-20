@@ -1,6 +1,6 @@
 ---
 name: Ylva Strid Holmertz
-position: staff
+position: phd
 job_title: Research Assistant
 start_date: 2023-06-12
 roles: 
