@@ -2,7 +2,7 @@
 name: Ylva Strid Holmertz
 position: phd
 job_title: Research Assistant
-start_date: 2023-06-12
+start_date: 2024-08-02
 roles: 
   - Chief Meme Officer
 image: "/static/img/members/profile-ylva.jpg"
