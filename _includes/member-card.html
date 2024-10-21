@@ -34,11 +34,16 @@
               <h6 class="small text-muted">
                 {{ p.job_title | default: p.position | upcase }}
               </h6>
-              {% if p.roles %}
-              {% for r in p.roles %}
-              <span class="badge bg-secondary">{{ r }}</span>
-              {% endfor %}
-              {% endif %}
+              <p>
+                {% if p.main_supervisor %}
+                <span class="badge bg-light text-dark border border-dark">Main supervisor: {{ p.main_supervisor }}</span>
+                {% endif %}
+                {% if p.roles %}
+                {% for r in p.roles %}
+                <span class="badge bg-secondary">{{ r }}</span>
+                {% endfor %}
+                {% endif %}
+              </p>
             </div>
             <div class="card-text">
               {{ p.content }}
@@ -50,7 +55,7 @@
           <div class="card-body text-muted">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-auto">
               {% for t in p.traits %}
-              <div class="col">
+              <div class="col" style="max-width: 33%;">
               {% include simple_list.html items=t.items title=t.title %}
               </div>
               {% endfor %}
