@@ -17,6 +17,6 @@ What connects all of our methods is the idea that *decisions should be driven by
 
 We are part of the [bioinformatics division](https://liu.se/en/organisation/liu/ifm/bioin) at [Linköping University](https://liu.se/en), and we collaborate closely with colleagues in the [Wallenberg Centre for Molecular Medicine (WCMM) at Linköping](https://liu.se/en/research/wcmm). We are part of the national Swedish [SciLifeLab network](https://www.scilifelab.se/) as part of the [Data-Driven Life Sciences (DDLS) program](https://www.scilifelab.se/data-driven/about/). 
 
-<img src="static/img/group/group-photo-2024-10.png" class="img-fluid rounded mx-auto d-block" style="max-width: 80%;" alt="D3MS Group, October 2024">
+<img src="static/img/group/group-photo-2024-10.jpeg" class="img-fluid rounded mx-auto d-block" style="max-width: 80%;" alt="D3MS Group, October 2024">
 <p class="text-center mt-2"><em>The D3MS Group, October 2024.<br>Group motto: "Forever trying to get a good group photo"</em></p>
 
