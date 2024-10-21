@@ -11,13 +11,13 @@ traits:
       - "[NWO Veni Laureate](https://www.nwo.nl/veni)"
       - "[SciLifeLab DDLS Fellow](https://www.scilifelab.se/data-driven/fellows/)"
   - title: "strengths"
-    items: "Physics, Crystallography"
+    items: ["Physics", "Crystallography"]
   - title: "weaknesses"
     items: ["Streaming Platforms", "Coffee Breaks", "Craft Breweries", "Gamification"]
   - title: "hobbies"
-    items: "Gardening, Carpentry"
+    items: ["Gardening", "Carpentry"]
   - title: "languages"
-    items: "English, Dutch"
+    items: ["English", "Dutch", "Swedish?"]
 links: 
   twitter: "https://twitter.com/nicholas_pearce"
   scholar: "https://scholar.google.com/citations?hl=nl&user=C0_MtmAAAAAJ"
